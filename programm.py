@@ -1,10 +1,10 @@
 import turtle
 
-turtle.setup(100, 100)
+turtle.setup(222, 222)
 wn = turtle.Screen()
 wn.bgcolor("lightgreen")
 # wn.title("Карта прохода по помещению")
-
+# coment
 tess = turtle.Turtle()
 tess.color("hotpink")
 tess.pensize(5)

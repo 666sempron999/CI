@@ -1,6 +1,6 @@
 import turtle
 
-turtle.setup(500, 500)
+turtle.setup(600, 600)
 wn = turtle.Screen()
 wn.bgcolor("lightgreen")
 # wn.title("Карта прохода по помещению")

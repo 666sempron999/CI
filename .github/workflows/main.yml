@@ -1,0 +1,12 @@
+name: First
+on: workflow_dispatch
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stage 1
+        run: echo one line print
+      - name: Stage 2
+        run: | 
+          echo one line print
+          echo second line print

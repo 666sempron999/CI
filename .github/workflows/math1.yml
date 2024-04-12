@@ -14,7 +14,6 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python mt.py
   test2:
-    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Download code
@@ -25,21 +24,27 @@ jobs:
 #          python-version: '3.10'
       - run: pip install -r requirements.txt
       - run: python mt.py
-  test3:
-    strategy:
-      matrix:
-        python-versions: [ 3.7, 3.8, 3.9]
-        os: [ ubuntu-latest, windows-latest ]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: Get python
-        uses: actions/setup-python@v5
+      - run: mkdir -p path/to/artifact
+      - run: echo hello > path/to/artifact/world.txt
+      - uses: actions/upload-artifact@v4
         with:
-          python-version: ${{ matrix.python-versions }}
-      - name: Download code
-        uses: actions/checkout@v4
-      - run: pip install -r requirements.txt
-      - run: python mt.py
+          name: my-artifact
+          path: path/to/artifact/world.txt
+  # test3:
+  #   strategy:
+  #     matrix:
+  #       python-versions: [ 3.7, 3.8, 3.9]
+  #       os: [ ubuntu-latest, windows-latest ]
+  #   runs-on: ${{ matrix.os }}
+  #   steps:
+  #     - name: Get python
+  #       uses: actions/setup-python@v5
+  #       with:
+  #         python-version: ${{ matrix.python-versions }}
+  #     - name: Download code
+  #       uses: actions/checkout@v4
+  #     - run: pip install -r requirements.txt
+  #     - run: python mt.py
 
 
 

@@ -1,4 +1,4 @@
-name: Python
+name: Math
 on: workflow_dispatch
 
 jobs: 

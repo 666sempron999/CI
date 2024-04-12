@@ -6,6 +6,5 @@ def main():
         np.save(f, res)
 
 
-
 if __name__ == '__main__':
     main()

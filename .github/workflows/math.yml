@@ -19,6 +19,7 @@ jobs:
         run: python mt.py
 
   m1_test:
+    needs: m_test
     runs-on: ubuntu-latest
     steps:
       - name: Download code

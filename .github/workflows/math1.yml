@@ -29,8 +29,8 @@ jobs:
     strategy:
       matrix:
         python-versions: [ 3.7, 3.8, 3.9]
-        # os: [ ubuntu-latest, windows-latest ]
-    runs-on: ubuntu-latest
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    runs-on: ${{ matrix.oss }}
     steps:
       - name: Get python
         uses: actions/setup-python@v5

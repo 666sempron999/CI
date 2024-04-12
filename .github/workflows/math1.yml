@@ -1,6 +1,5 @@
 name: Math
 on: push
-
 jobs: 
   test:
     runs-on: ubuntu-latest

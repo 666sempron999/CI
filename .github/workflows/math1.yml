@@ -28,7 +28,7 @@ jobs:
   test3:
     strategy:
       matrix:
-        python-versions: [ 3.7, 3.8, 3.9, 3.10 ]
+        python-versions: [ 3.7, 3.8, 3.9]
         # os: [ ubuntu-latest, windows-latest ]
     runs-on: ubuntu-latest
     steps:

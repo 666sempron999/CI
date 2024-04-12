@@ -11,6 +11,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10' 
-      - run: python mt.py
+      - name: install lib
+        run: pip install numpy
+      - name: run code
+        run: python mt.py
         
 

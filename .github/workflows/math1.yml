@@ -14,6 +14,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python mt.py
   test2:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Download code
